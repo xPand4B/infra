@@ -1,0 +1,112 @@
+---
+# Homepage configuration
+# See https://fontawesome.com/v5/search for icons options
+
+title: "Demo dashboard"
+subtitle: "Homer"
+logo: "logo.png"
+# icon: "fas fa-skull-crossbones" # Optional icon
+
+#stylesheet:
+#  - "assets/custom.css"
+
+header: true
+footer: false
+columns: 3
+connectivityCheck: true
+
+# Optional theme customization
+theme: default
+colors:
+  light:
+    highlight-primary: "#3367d6"
+    highlight-secondary: "#4285f4"
+    highlight-hover: "#5a95f5"
+    background: "#f5f5f5"
+    card-background: "#ffffff"
+    text: "#363636"
+    text-header: "#ffffff"
+    text-title: "#303030"
+    text-subtitle: "#424242"
+    card-shadow: rgba(0, 0, 0, 0.1)
+    link: "#3273dc"
+    link-hover: "#363636"
+  dark:
+    highlight-primary: "#3367d6"
+    highlight-secondary: "#4285f4"
+    highlight-hover: "#5a95f5"
+    background: "#131313"
+    card-background: "#2b2b2b"
+    text: "#eaeaea"
+    text-header: "#ffffff"
+    text-title: "#fafafa"
+    text-subtitle: "#f5f5f5"
+    card-shadow: rgba(0, 0, 0, 0.4)
+    link: "#3273dc"
+    link-hover: "#ffdd57"
+
+# Optional message
+#message:
+  #url: https://b4bz.io
+  #style: "is-dark" # See https://bulma.io/documentation/components/message/#colors for styling options.
+  #title: "Demo !"
+  #icon: "fa fa-grin"
+  #content: "This is a dummy homepage demo. <br /> Find more information on <a href='https://github.com/bastienwirtz/homer'>github.com/bastienwirtz/homer</a>"
+
+# Optional navbar
+# links: [] # Allows for navbar (dark mode, layout, and search) without any links
+links:
+  - name: "Github"
+    icon: "fab fa-github"
+    url: "https://github.com/xPand4B"
+    target: "_blank" # optional html a tag target attribute
+  - name: "YouTube"
+    icon: "fab fa-youtube"
+    url: "https://www.youtube.com/feed/subscriptions"
+    target: "_blank"
+  - name: "Private"
+    icon: "fas fa-envelope"
+    url: "https://mail.google.com/mail/u/1/"
+    target: "_blank"
+  - name: "xPand"
+    icon: "fas fa-envelope"
+    url: "https://mail.google.com/mail/u/0/"
+    target: "_blank"
+
+# Services
+# First level array represent a group.
+# Leave only a "items" key if not using group (group name, icon & tagstyle are optional, section separation will not be displayed).
+services:
+  - name: "Services"
+    icon: "fas fa-rocket"
+    items:
+      - name: "Nextcloud"
+        logo: "assets/tools/nextcloud.png"
+        url: "https://cloud.xpand4b.de"
+        target: "_blank"
+      - name: "HedgeDoc"
+        logo: "assets/tools/hedgedoc.png"
+        url: "https://md.xpand4b.de"
+        target: "_blank"
+      - name: "Code Server"
+        logo: "assets/tools/vscode.png"
+        url: "https://code.xpand4b.de"
+        target: "_blank"
+  - name: "Tools"
+    icon: "fas fa-tools"
+    items:
+      - name: "Uptime Kuma"
+        logo: "assets/tools/uptime-kuma.png"
+        url: "https://monitor.xpand4b.de/dashboard"
+        target: "_blank"
+  - name: "System"
+    icon: "fas fa-cog"
+    items:
+      - name: "Portainer"
+        logo: "assets/tools/portainer.png"
+        url: "https://portainer.xpand4b.de"
+        target: "_blank"
+      - name: "Nginx Proxy Manager"
+        logo: "assets/tools/nginx-proxy-manager.png"
+        url: "https://npm.xpand4b.de"
+        target: "_blank"
