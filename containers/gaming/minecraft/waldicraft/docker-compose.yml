@@ -1,0 +1,99 @@
+version: "3.8"
+
+services:
+  proxy:
+    image: itzg/bungeecord
+    container_name: mc-1181-velocity
+    restart: unless-stopped
+    ports:
+      - 1337:25577
+    environment:
+      TYPE: VELOCITY
+      DEBUG: "false"
+      ENABLE_RCON: "true"
+    volumes:
+      - /opt/Minecraft/1181-network/prod/velocity/config:/config
+      - /opt/Minecraft/1181-network/prod/velocity/plugins:/plugins
+      - /opt/Minecraft/1181-network/prod/velocity/server:/server
+
+  waldicraft:
+    image: itzg/minecraft-server:java17
+    container_name: mc-1181-waldicraft
+    restart: unless-stopped
+    ports:
+      - 1338:25565
+      - 8123:8123       # Dynmap
+      - 24454:24454/udp # Voicechat
+    environment:
+      EULA: "true"
+      TYPE: "FABRIC"
+      VERSION: "1.18.1"
+      LEVEL: "waldicraft"
+      MAX_MEMORY: 8G
+      OVERRIDE_SERVER_PROPERTIES: "true"
+      OPS: "xPand_4B,Rainerle98"
+      MOTD: "§2WaldiCraft SMP§r | §4Survival 1.18.1§r | Fabric"
+      ONLINE_MODE: "false"
+      DIFFICULTY: "normal"
+      MODE: "survival"
+      PVP: "true"
+      ENABLE_COMMAND_BLOCK: "true"
+      MAX_PLAYERS: 10
+      ALLOW_NETHER: "true"
+      ALLOW_FLIGHT: "false"
+      ANNOUNCE_PLAYER_ACHIEVEMENTS: "true"
+      FORCE_GAMEMODE: "true"
+      GENERATE_STRUCTURES: "true"
+      HARDCORE: "false"
+      SNOOPER_ENABLED: "false"
+      MAX_TICK_TIME: 60000
+      ENABLE_ROLLING_LOGS: "true"
+      SPAWN_ANIMALS: "true"
+      SPAWN_MONSTERS: "true"
+      SPAWN_NPCS: "true"
+      SPAWN_PROTECTION: 0
+      VIEW_DISTANCE: 14
+      COPY_CONFIG_DEST: "/config"
+      VANILLATWEAKS_FILE: "/config/vt-datapacks.json,/config/vt-craftingtweaks.json"
+    volumes:
+      - /opt/Minecraft/1181-network/prod/waldicraft/config:/config
+      - /opt/Minecraft/1181-network/prod/waldicraft/data:/data
+      - /opt/Minecraft/1181-network/prod/waldicraft/mods:/mods:ro
+      
+  redstone:
+    image: itzg/minecraft-server:java17
+    container_name: mc-1181-redstone
+    restart: unless-stopped
+    ports:
+      - 1339:25565
+    environment:
+      EULA: "true"
+      TYPE: "FABRIC"
+      LEVEL_TYPE: "flat"
+      VERSION: "1.18.1"
+      MAX_MEMORY: 3G
+      OVERRIDE_SERVER_PROPERTIES: "true"
+      OPS: "xPand_4B,Rainerle98"
+      MOTD: "§2WaldiCraft Redstone§r | §4Survival 1.18.1§r | Fabric"
+      ONLINE_MODE: "false"
+      DIFFICULTY: "peaceful"
+      MODE: "creative"
+      ENABLE_COMMAND_BLOCK: "true"
+      MAX_PLAYERS: 10
+      ALLOW_NETHER: "true"
+      ALLOW_FLIGHT: "false"
+      ANNOUNCE_PLAYER_ACHIEVEMENTS: "true"
+      FORCE_GAMEMODE: "true"
+      GENERATE_STRUCTURES: "true"
+      HARDCORE: "false"
+      SNOOPER_ENABLED: "false"
+      MAX_TICK_TIME: 60000
+      ENABLE_ROLLING_LOGS: "true"
+      SPAWN_ANIMALS: "true"
+      SPAWN_MONSTERS: "true"
+      SPAWN_NPCS: "true"
+      SPAWN_PROTECTION: 0
+      VIEW_DISTANCE: 14
+    volumes:
+      - /opt/Minecraft/1181-network/prod/redstone/data:/data
+      - /opt/Minecraft/1181-network/prod/redstone/mods:/mods:ro
