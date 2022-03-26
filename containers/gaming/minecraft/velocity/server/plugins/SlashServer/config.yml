@@ -1,0 +1,9 @@
+servers:
+-   server: waldicraft
+    commands:
+    - waldicraft
+    - smp
+-   server: redstone
+    commands:
+    - redstone
+    - testing
