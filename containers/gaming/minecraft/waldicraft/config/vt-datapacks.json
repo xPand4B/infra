@@ -30,6 +30,7 @@
             "tag"
         ],
         "experimental": [
+            "chunk loaders",
             "confetti creepers"
         ]
     }
