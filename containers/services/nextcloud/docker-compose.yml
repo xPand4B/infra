@@ -10,11 +10,12 @@ services:
     depends_on:
       - db
     environment:
-      VIRTUAL_HOST: "cloud.xpand4b.de"
-      LETSENCRYPT_HOST: "cloud.xpand4b.de"
-      LETSENCRYPT_EMAIL: "xpand.4beatz@gmail.com"
+      VIRTUAL_HOST: ""
+      LETSENCRYPT_HOST: ""
+      LETSENCRYPT_EMAIL: ""
       NEXTCLOUD_ADMIN_USER: "Admin"
-      NEXTCLOUD_ADMIN_PASSWORD: "A179ehkoliwaokh98eh74"
+      NEXTCLOUD_ADMIN_PASSWORD: ""
+      REDIS_HOST_PASSWORD: "${REDIS_PASSWORD}"
     volumes:
       - nextcloud:/var/www/html
       - ./app/config:/var/www/html/config
@@ -36,6 +37,12 @@ services:
     volumes:
       - db:/var/lib/mysql
       - /etc/localtime:/etc/localtime:ro
+
+  redis:
+    image: redis
+    container_name: nextcloud-redis
+    restart: unless-stopped
+    command: redis-server --requirepass ${REDIS_PASSWORD}
 
 volumes:
   nextcloud:
