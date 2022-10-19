@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  bitwarden:
+    image: vaultwarden/server:latest
+    container_name: bitwarden
+    restart: always
+    ports:
+      - ${BITWARDEN_PORT:-80}:80
+      - 3012:3012
+    volumes:
+      - ./data:/data

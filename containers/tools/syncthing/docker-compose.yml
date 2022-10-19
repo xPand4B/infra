@@ -1,0 +1,35 @@
+version: "3.8"
+
+services:
+  syncthing:
+    image: lscr.io/linuxserver/syncthing
+    container_name: syncthing
+    restart: unless-stopped
+    hostname: syncthing #optional
+    ports:
+      - ${SYNCTHING_PORT:-8384}:8384
+      - 22000:22000/tcp
+      - 22000:22000/udp
+      - 21027:21027/udp
+    environment:
+      TZ: "{$TIMEZONE}"
+      PUID: "{$UID}"
+      PGID: "{$GID}"
+    volumes:
+      - /data/compose/syncthing/config:/config
+      - /home/xpand/Synced:/synced
+      - /data/compose:/data-compose
+      - /data/compose/bitwarden:/bitwarden
+      - /data/compose/code-server:/code-server
+      - /data/compose/hedgedoc:/hedgedocs
+      - /data/compose/heimdall:/heimdall
+      - /data/compose/homer:/homer
+      - /data/compose/nginx_proxy_manager:/nginx-proxy-manager
+      - /data/compose/plex:/plex
+      - /data/compose/searxng:/searxng
+      - /data/compose/syncthing:/syncthing
+
+      - /data/compose/uptime_kuma:/uptime-kuma
+      - /home/xpand/Sites/Portainer:/portainer
+      - /opt/Minecraft/1181-network/prod/backups:/mc-backups
+      - /opt/Minecraft/1181-network/prod/velocity:/mc-proxy

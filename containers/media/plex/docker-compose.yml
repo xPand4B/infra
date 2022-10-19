@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  plex:
+    image: lscr.io/linuxserver/plex:latest
+    container_name: plex
+    restart: always
+    network_mode: host
+    ports:
+      - ${PLEX_PORT:-32400}:32400/tcp
+    environment:
+      TZ: "{$TIMEZONE}"
+      PUID: "${PUID}"
+      PGID: "${PGID}"
+      VERSION: "{$VERSION}"
+      PLEX_CLAIM: "{$PLEX_CLAIM}"
+    volumes:
+      - ./config:/config

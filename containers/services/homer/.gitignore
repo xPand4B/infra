@@ -1,0 +1,5 @@
+* 
+
+!.env.sample
+!/files
+!.docker-compose.yml

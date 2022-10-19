@@ -1,0 +1,170 @@
+#---
+# Homepage configuration
+# See https://fontawesome.com/v5/search for icons options
+
+subtitle: "Byte5"
+title: "Dashboard"
+logo: "assets/logo-byte5.png"
+#icon: "fas fa-skull-crossbones" # Optional icon
+
+#stylesheet:
+#  - "assets/custom.css"
+
+header: true
+footer: false
+columns: 4
+connectivityCheck: true
+
+# Optional theme customization
+theme: default
+colors:
+  light:
+    highlight-primary: "#3367d6"
+    highlight-secondary: "#4285f4"
+    highlight-hover: "#5a95f5"
+    background: "#f5f5f5"
+    card-background: "#ffffff"
+    text: "#363636"
+    text-header: "#ffffff"
+    text-title: "#303030"
+    text-subtitle: "#424242"
+    card-shadow: rgba(0, 0, 0, 0.1)
+    link: "#3273dc"
+    link-hover: "#363636"
+  dark:
+    highlight-primary: "#3367d6"
+    highlight-secondary: "#4285f4"
+    highlight-hover: "#5a95f5"
+    background: "#131313"
+    card-background: "#2b2b2b"
+    text: "#eaeaea"
+    text-header: "#ffffff"
+    text-title: "#fafafa"
+    text-subtitle: "#f5f5f5"
+    card-shadow: rgba(0, 0, 0, 0.4)
+    link: "#3273dc"
+    link-hover: "#ffdd57"
+
+# Optional message
+#message:
+  #url: https://b4bz.io
+  #style: "is-dark" # See https://bulma.io/documentation/components/message/#colors for styling options.
+  #title: "Demo !"
+  #icon: "fa fa-grin"
+  #content: "This is a dummy homepage demo. <br /> Find more information on <a href='https://github.com/bastienwirtz/homer'>github.com/bastienwirtz/homer</a>"
+
+# Optional navbar
+# links: [] # Allows for navbar (dark mode, layout, and search) without any links
+links:
+  - name: "Private"
+    icon: "fas fa-house"
+    url: "https://home.xpand4b.de"
+  - name: "Mail"
+    icon: "fas fa-envelope"
+    url: "https://outlook.office.com/mail/"
+    target: "_blank"
+  - name: "Calendar"
+    icon: "fas fa-calendar"
+    url: "https://outlook.office.com/calendar/view/week"
+    target: "_blank"
+  - name: "ToDos"
+    icon: "fas fa-list-ul"
+    url: "https://md.xpand4b.de/oSskR_faRRyz3WebIIsNQw?both"
+    target: "_blank"
+  - name: "ValetDashboard"
+    icon: "fab fa-laravel"
+    url: "https://valetdashboard.test/"
+    target: "_blank"
+
+# Services
+# First level array represent a group.
+# Leave only a "items" key if not using group (group name, icon & tagstyle are optional, section separation will not be displayed).
+services:
+  - name: "Services"
+    icon: "fas fa-rocket"
+    items:
+      - name: "Jira"
+        logo: "assets/tools/jira.png"
+        url: "https://byte5.atlassian.net/jira/your-work"
+        target: "_blank"
+      - name: "Confluence"
+        logo: "assets/tools/confluence.svg"
+        url: "https://byte5.atlassian.net/wiki/home"
+        target: "_blank"
+      - name: "Azure DevOps"
+        logo: "assets/tools/azure-devops.png"
+        url: "https://byte5-projects.visualstudio.com/"
+        target: "_blank"
+      - name: "Harvest"
+        logo: "assets/tools/harvest.png"
+        url: "https://byte5digitalmediagmbh.harvestapp.com/welcome"
+        target: "_blank"
+      - name: "Timebutler"
+        logo: "assets/tools/timebutler.png"
+        url: "https://timebutler.de/do?ha=home&ac=1"
+        target: "_blank"
+      - name: "Sipgate"
+        logo: "assets/tools/sipgate.png"
+        url: "https://app.sipgate.com/w34/history"
+        target: "_blank"
+      - name: "Softgarden"
+        logo: "assets/tools/softgarden.png"
+        url: "https://app.softgarden.io/just-hire/applications"
+        target: "_blank"
+#      - name: "Keeper"
+#        logo: "assets/tools/keeper.png"
+#        url: "https://keepersecurity.eu/vault"
+#        target: "_blank"
+  - name: "Büchergilde"
+    icon: "fas fa-code"
+    items:
+      - name: "Jira"
+        logo: "assets/tools/jira.png"
+        url: "https://byte5.atlassian.net/jira/software/c/projects/BG/boards/14"
+        target: "_blank"
+      - name: "Repo"
+        logo: "assets/tools/azure-devops.png"
+        url: "https://byte5-projects.visualstudio.com/B%C3%BCchergilde/_git/buechergilde-backend"
+        target: "_blank"
+      - name: "Local"
+        logo: "assets/tools/pimcore.png"
+        url: "https://buechergilde-backend.test/admin"
+        target: "_blank"
+      - name: "Staging - Backend"
+        logo: "assets/tools/pimcore.png"
+        url: "https://pimcore.buechergilde.byte5.net/admin"
+        target: "_blank"
+      - name: "Staging - Frontend"
+        logo: "assets/tools/pimcore.png"
+        url: "https://buechergilde.byte5.net"
+        target: "_blank"
+  - name: "Producer Cloud"
+    icon: "fas fa-code"
+    items:
+      - name: "Jira"
+        logo: "assets/tools/jira.png"
+        url: "https://producercloud.atlassian.net/jira/software/projects/PCWEB/boards/1"
+        target: "_blank"
+      - name: "Confluence"
+        logo: "assets/tools/confluence.svg"
+        url: "https://producercloud.atlassian.net/wiki/home"
+        target: "_blank"
+      - name: "Repos"
+        logo: "assets/tools/github.png"
+        url: "https://github.com/orgs/ProducerCloud/teams/web-team/repositories"
+        target: "_blank"
+      - name: "Local"
+        logo: "assets/tools/pimcore.png"
+        url: "https://pc-pimcore.test/admin"
+        target: "_blank"
+      - name: "Staging"
+        logo: "assets/tools/producer-cloud.svg"
+        url: "https://staging.producercloud.com"
+        target: "_blank"
+  - name: "Internal Dev"
+    icon: "fas fa-code"
+    items:
+      - name: "Carrera-Toys"
+        logo: "assets/tools/azure-devops.png"
+        url: "https://byte5-projects.visualstudio.com/Carrera%20Toys/_git/carrera-toys-pimcore-europe"
+        target: "_blank"
