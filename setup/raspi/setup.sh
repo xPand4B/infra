@@ -124,6 +124,7 @@ sudo chmod a+r /etc/apt/keyrings/docker.gpg
 sudo apt-get update -y
 # Install Docker Engine, containerd, and Docker Compose
 installPackages "docker-ce docker-ce-cli containerd.io docker-compose-plugin"
+sudo chmod 666 /var/run/docker.sock
 printPackageFinishedTitle $name
 
 echo "${green}"
