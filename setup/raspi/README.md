@@ -1,5 +1,17 @@
 # RasPi Setup
 
+## Add root user (Ubuntu)
+```bash
+# Creating Users
+sudo adduser USERNAME
+
+# To set the password of the new user, enter the following command:
+sudo passwd USERNAME
+
+# Assigning Sudo Rights to a User
+sudo usermod -aG sudo USERNAME
+```
+
 ## How to install
 ```bash
 # RasPi Setup
