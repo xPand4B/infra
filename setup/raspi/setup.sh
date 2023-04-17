@@ -95,9 +95,9 @@ echo "" >> $zshrcFile
 echo "###############################" >> $zshrcFile
 echo "# Docker                      #" >> $zshrcFile
 echo "###############################" >> $zshrcFile
-echo "alias dc=\"docker-compose\"" >> $zshrcFile
+echo "alias dc=\"docker compose\"" >> $zshrcFile
 echo "alias dcup=\"dc up -d\"" >> $zshrcFile
-echo "alias dcr=\"docker-compose run --rm\"" >> $zshrcFile
+echo "alias dcr=\"docker compose run --rm\"" >> $zshrcFile
 source ~/.zshrc
 
 printPackageFinishedTitle $name
