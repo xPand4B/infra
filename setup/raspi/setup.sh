@@ -63,6 +63,7 @@ printPackageInstallingTitle $name
 installPackages "curl"
 updatePackages
 installPackages "wget git samba ntfs-3g"
+installPackages "i2c-tools build-essential raspberrypi-kernel-headers"
 # https://askubuntu.com/a/1347002
 sudo apt-get purge needrestart -y
 printPackageFinishedTitle $name
