@@ -1,5 +1,10 @@
 # RasPi Setup
 
+## Generate SSH key
+```bash
+ssh-keygen -t rsa
+```
+
 ## Add root user (Ubuntu)
 ```bash
 # Creating Users
