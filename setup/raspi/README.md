@@ -15,7 +15,11 @@ sudo usermod -aG sudo USERNAME
 ## How to install
 ```bash
 # RasPi Setup
-bash <(curl -s https://raw.githubusercontent.com/xPand4B/infra/main/setup/raspi/setup.sh)
+   # Ubuntu Server
+   bash <(curl -s https://raw.githubusercontent.com/xPand4B/infra/main/setup/raspi/setup.sh)
+   
+   # Raspbian
+   bash <(curl -s https://raw.githubusercontent.com/xPand4B/infra/main/setup/raspi/setup-raspbian.sh)
 
 # SAMBA Setup
 bash <(curl -s https://raw.githubusercontent.com/xPand4B/infra/main/setup/raspi/smb-setup.sh)
