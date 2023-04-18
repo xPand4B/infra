@@ -37,6 +37,7 @@ function printPackageFinishedTitle() {
 function updatePackages() {
     sudo apt update -y
     sudo apt upgrade -y
+    sudo apt --fix-broken install
 }
 
 function installPackages() {
@@ -98,6 +99,7 @@ updatePackages
 
 sudo groupadd docker
 sudo usermod -aG docker $USER
+sudo newgrp docker
 docker version
 
 printPackageFinishedTitle $name
